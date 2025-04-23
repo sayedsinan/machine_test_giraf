@@ -61,14 +61,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 
 - Thank you to the Flutter team for creating this amazing framework.
-- [List any other resources or contributors]
+
 ```
 
-### How to Use this README:
-- **Project Overview**: Replace the general description with specific details about your app, like its functionality or purpose.
-- **Features**: Add any features your app supports or will support in the future.
-- **Installation**: Detailed steps for setting up and running the app.
-- **Contributing**: If others will contribute to your project, provide steps on how they can contribute.
-- **License**: This assumes you’re using the MIT License, but adjust if you’re using a different license.
+
 
 Feel free to tweak it further to fit your project!
