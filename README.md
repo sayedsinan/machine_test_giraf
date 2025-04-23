@@ -45,17 +45,8 @@ You can run the app on your connected device or emulator with:
 flutter run
 ```
 
-## Project Structure
-
-- **`lib/`**: Contains the Dart code for the application.
-  - **`main.dart`**: The main entry point of the application.
-- **`android/`**: Contains the Android-specific code and configuration files.
-  - **`AndroidManifest.xml`**: Android-specific permissions and configurations.
-- **`assets/`**: Contains images, fonts, and other assets used by the app.
-
 ## Contributing
 
-We welcome contributions! To contribute:
 
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature-branch`).
