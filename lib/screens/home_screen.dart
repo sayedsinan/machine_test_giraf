@@ -26,7 +26,10 @@ class _HomeScreenState extends State<HomeScreen> {
     final meetingsForDay = provider.meetingsForSelectedDate;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Meeting Scheduler')),
+      appBar: AppBar(
+    
+        actions: [Icon(Icons.abc), Icon(Icons.abc), Icon(Icons.abc)],
+      ),
       body: Column(
         children: [
           TableCalendar(
@@ -39,23 +42,32 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             calendarBuilders: CalendarBuilders(
               defaultBuilder: (context, day, _) {
-                final meetingsForDay = meetings.where((m) =>
-                  m.date.year == day.year &&
-                  m.date.month == day.month &&
-                  m.date.day == day.day
-                ).toList();
+                final meetingsForDay =
+                    meetings
+                        .where(
+                          (m) =>
+                              m.date.year == day.year &&
+                              m.date.month == day.month &&
+                              m.date.day == day.day,
+                        )
+                        .toList();
 
                 if (meetingsForDay.isEmpty) return null;
 
                 final today = DateTime.now();
                 final isToday = isSameDay(day, today);
-                final isPast = day.isBefore(DateTime(today.year, today.month, today.day));
+                final isPast = day.isBefore(
+                  DateTime(today.year, today.month, today.day),
+                );
                 final isFuture = day.isAfter(today);
 
                 Color bgColor = Colors.transparent;
-                if (isToday) bgColor = Colors.yellow;
-                else if (isPast) bgColor = Colors.grey.shade300;
-                else if (isFuture) bgColor = Colors.green.shade300;
+                if (isToday)
+                  bgColor = Colors.yellow;
+                else if (isPast)
+                  bgColor = Colors.grey.shade300;
+                else if (isFuture)
+                  bgColor = Colors.green.shade300;
 
                 return Container(
                   margin: const EdgeInsets.all(6),
@@ -70,7 +82,10 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           const SizedBox(height: 10),
-          const Text('Meetings on selected day:', style: TextStyle(fontWeight: FontWeight.bold)),
+          const Text(
+            'Meetings on selected day:',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
           const SizedBox(height: 5),
           Expanded(
             child: ListView.builder(
@@ -78,9 +93,10 @@ class _HomeScreenState extends State<HomeScreen> {
               itemBuilder: (context, index) {
                 final meeting = meetingsForDay[index];
                 return ListTile(
-                  leading: meeting.conflicted
-                    ? const Icon(Icons.warning, color: Colors.red)
-                    : const Icon(Icons.event),
+                  leading:
+                      meeting.conflicted
+                          ? const Icon(Icons.warning, color: Colors.red)
+                          : const Icon(Icons.event),
                   title: Text(meeting.title),
                   subtitle: Text(meeting.date.toString()),
                 );
