@@ -1,7 +1,7 @@
 
 ```markdown
 # GreenPulse
-https://github.com/user-attachments/assets/bb76f6f0-6a8b-412b-a3a6-690cadee902c
+
 
 
 ## Requirements
@@ -19,6 +19,9 @@ https://github.com/user-attachments/assets/bb76f6f0-6a8b-412b-a3a6-690cadee902c
 git clone https://github.com/yourusername/GreenPulse.git
 cd GreenPulse
 ```
+
+![Screenshot 2025-04-23 171428](https://github.com/user-attachments/assets/2b3a1e17-61c0-41ce-8060-d44a614fc159)
+
 
 ### 2. Install dependencies
 
