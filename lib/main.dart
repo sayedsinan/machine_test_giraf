@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:machine_test_giraf/screens/splash_screen.dart';
 import 'package:provider/provider.dart';
 import 'providers/meeting_provider.dart';
-import 'screens/home_screen.dart';
+
 
 void main() {
   runApp(
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Meeting Scheduler',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const HomeScreen(),
+      home: const SplashScreen(),
     );
   }
 }

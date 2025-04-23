@@ -8,7 +8,7 @@ class CustomTopAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       backgroundColor: Colors.black,
       elevation: 0,
-      title: const Text(''), // Empty title if needed
+      title: const Text(''), 
       automaticallyImplyLeading: false,
       actions: [
         _circleIcon(Icons.factory),
