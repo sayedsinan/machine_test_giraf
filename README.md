@@ -65,5 +65,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ```
 
 
-
-Feel free to tweak it further to fit your project!
