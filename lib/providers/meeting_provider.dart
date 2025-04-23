@@ -26,4 +26,34 @@ class MeetingProvider with ChangeNotifier {
     _selectedDate = date;
     notifyListeners();
   }
+
+  String formatDateWithDay(DateTime date) {
+    final weekdays = [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+      'Sunday',
+    ];
+    final months = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ];
+
+    String day = weekdays[date.weekday - 1];
+    String month = months[date.month - 1];
+    return '$day, $month ${date.day}';
+  }
 }

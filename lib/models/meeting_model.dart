@@ -10,10 +10,13 @@ class MeetingModel {
   });
 
   factory MeetingModel.fromJson(Map<String, dynamic> json) {
+  
+    var item = json['items'][0]; 
+
     return MeetingModel(
-      title: json['title'] ?? 'meeting',
+      title: item['title'] ?? 'Meeting',  
       date: DateTime.parse(json['date']),
-      conflicted: json['conflicted'] ?? false,
+      conflicted: item['conflicted'] ?? false,
     );
   }
 }
