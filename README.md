@@ -1,7 +1,7 @@
 
 ```markdown
 # GreenPulse
-![Screenshot 2025-04-23 171428](https://github.com/user-attachments/assets/bb76f6f0-6a8b-412b-a3a6-690cadee902c)
+https://github.com/user-attachments/assets/bb76f6f0-6a8b-412b-a3a6-690cadee902c
 
 
 ## Requirements
